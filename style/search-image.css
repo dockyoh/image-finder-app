@@ -1,0 +1,141 @@
+:root {
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 32px;
+  --spacing-xl: 64px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  object-fit: cover;
+  font-family: "Happy Monkey", system-ui;
+}
+
+.buttons {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: var(--spacing-s);
+  border-radius: var(--spacing-s);
+  border: none;
+  background-color: #42b883;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.main-container {
+  padding-top: var(--spacing-l);
+  max-width: 1440px;
+  min-width: 375px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  padding: var(--spacing-xl) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 300px;
+  height: 39px;
+  border: none;
+  background-color: lightgrey;
+  padding: var(--spacing-s);
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-top-left-radius: var(--spacing-s);
+  border-bottom-left-radius: var(--spacing-s);
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  background-color: #4ef037;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.search-button:hover {
+  background-color: #128494;
+  color: white;
+}
+
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: var(--spacing-m);
+  max-width: 1440px;
+
+  margin: 0 auto;
+}
+
+.image-result {
+  /* border: 1px solid black; */
+  width: 80%;
+  margin: 0 auto;
+  border-radius: var(--spacing-s);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.image-result:hover img {
+  transform: scale(1.03);
+}
+
+.image-result img {
+  width: 100%;
+  height: 350px;
+  transition: all 0.15s ease;
+}
+
+.image-result a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+  padding: var(--spacing-s);
+  background-color: lightgrey;
+  height: 100%;
+}
+
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-m);
+}
+
+.show-more:hover {
+  background-color: #347474;
+  color: white;
+}
+
+.hide-btn {
+  display: none;
+}
+
+.loading-container p {
+  background-color: rgba(255, 0, 0, 0.253);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-m) 0;
+  border-radius: var(--spacing-s);
+  font-size: 2rem;
+  color: red;
+}
+
+.loading-show-hide {
+  display: none;
+}
